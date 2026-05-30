@@ -15,7 +15,10 @@ class Vsa_tb___024root;
 class Vsa_tb___024unit;
 class Vsa_tb___024unit__03a__03asa_allones_seq;
 class Vsa_tb___024unit__03a__03asa_allones_seq__Vclpkg;
+class Vsa_tb___024unit__03a__03asa_base_seq;
 class Vsa_tb___024unit__03a__03asa_base_seq__Vclpkg;
+class Vsa_tb___024unit__03a__03asa_corner_seq;
+class Vsa_tb___024unit__03a__03asa_corner_seq__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_coverage;
 class Vsa_tb___024unit__03a__03asa_coverage__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_directed_seq;
@@ -23,12 +26,14 @@ class Vsa_tb___024unit__03a__03asa_directed_seq__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_random_seq;
 class Vsa_tb___024unit__03a__03asa_random_seq__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_scoreboard;
-class Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg;
+#include "Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg.h"
 class Vsa_tb___024unit__03a__03asa_transaction;
 class Vsa_tb___024unit__03a__03asa_transaction__Vclpkg;
 class Vsa_tb_std;
 class Vsa_tb_std__03a__03amailbox__Tz1;
 class Vsa_tb_std__03a__03amailbox__Tz1__Vclpkg;
+class Vsa_tb_std__03a__03amailbox__Tz2;
+class Vsa_tb_std__03a__03amailbox__Tz2__Vclpkg;
 class Vsa_tb_std__03a__03aprocess__Vclpkg;
 class Vsa_tb_std__03a__03asemaphore__Vclpkg;
 
@@ -57,9 +62,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb VL_NOT_FINAL : public VerilatedModel {
     Vsa_tb___024unit__03a__03asa_directed_seq__Vclpkg* const __024unit__03a__03asa_directed_seq__Vclpkg;
     Vsa_tb___024unit__03a__03asa_allones_seq__Vclpkg* const __024unit__03a__03asa_allones_seq__Vclpkg;
     Vsa_tb___024unit__03a__03asa_random_seq__Vclpkg* const __024unit__03a__03asa_random_seq__Vclpkg;
+    Vsa_tb___024unit__03a__03asa_corner_seq__Vclpkg* const __024unit__03a__03asa_corner_seq__Vclpkg;
     Vsa_tb_std__03a__03asemaphore__Vclpkg* const std__03a__03asemaphore__Vclpkg;
     Vsa_tb_std__03a__03aprocess__Vclpkg* const std__03a__03aprocess__Vclpkg;
     Vsa_tb_std__03a__03amailbox__Tz1__Vclpkg* const std__03a__03amailbox__Tz1__Vclpkg;
+    Vsa_tb_std__03a__03amailbox__Tz2__Vclpkg* const std__03a__03amailbox__Tz2__Vclpkg;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

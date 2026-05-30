@@ -8,7 +8,7 @@
 #include "verilated.h"
 #include "verilated_timing.h"
 class Vsa_tb___024unit__03a__03asa_transaction;
-class Vsa_tb_std__03a__03amailbox__Tz1;
+class Vsa_tb_std__03a__03amailbox__Tz2;
 
 
 class Vsa_tb__Syms;
@@ -34,7 +34,9 @@ class Vsa_tb__Syms;
 class Vsa_tb___024unit__03a__03asa_base_seq : public VlClass {
   public:
     VlCoroutine __VnoInFunc_load_weights(Vsa_tb__Syms* __restrict vlSymsp, VlUnpacked<VlUnpacked<CData/*7:0*/, 8>, 8> w);
+    void __VnoInFunc_rand_binned(Vsa_tb__Syms* __restrict vlSymsp, CData/*7:0*/ &rand_binned__Vfuncrtn);
     VlCoroutine __VnoInFunc_send_activation(Vsa_tb__Syms* __restrict vlSymsp, VlUnpacked<CData/*7:0*/, 8> acts);
+    VlCoroutine __VnoInFunc_send_activation_bb(Vsa_tb__Syms* __restrict vlSymsp, VlUnpacked<CData/*7:0*/, 8> acts0, VlUnpacked<CData/*7:0*/, 8> acts1);
     VlCoroutine __VnoInFunc_send_idle(Vsa_tb__Syms* __restrict vlSymsp, IData/*31:0*/ n);
   private:
     void _ctor_var_reset(Vsa_tb__Syms* __restrict vlSymsp);

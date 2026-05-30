@@ -8,6 +8,7 @@
 #include "verilated.h"
 #include "verilated_timing.h"
 class Vsa_tb_std__03a__03amailbox__Tz1;
+class Vsa_tb_std__03a__03amailbox__Tz2;
 
 
 class Vsa_tb__Syms;
@@ -16,8 +17,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024unit final : public VerilatedModu
   public:
 
     // DESIGN SPECIFIC STATE
-    VlClassRef<Vsa_tb_std__03a__03amailbox__Tz1> g_drv_mbx;
-    VlClassRef<Vsa_tb_std__03a__03amailbox__Tz1> g_mon_mbx;
+    VlClassRef<Vsa_tb_std__03a__03amailbox__Tz2> g_drv_mbx;
+    VlClassRef<Vsa_tb_std__03a__03amailbox__Tz2> g_mon_mbx;
+    VlClassRef<Vsa_tb_std__03a__03amailbox__Tz1> g_psum_mbx;
 
     // INTERNAL VARIABLES
     Vsa_tb__Syms* const vlSymsp;

@@ -113,7 +113,6 @@ VlCoroutine Vsa_tb___024unit__03a__03asa_directed_seq::__VnoInFunc_run(Vsa_tb__S
     unnamedblk2_1__DOT__r = 7U;
     a[7U] = 1U;
     unnamedblk2_1__DOT__r = 8U;
-    VL_WRITEF("[SEQ] Sending all-ones activation\n");
     co_await this->__VnoInFunc_send_activation(vlSymsp, a);
     a[0U] = 0xffU;
     unnamedblk2_2__DOT__r = 1U;
@@ -131,6 +130,5 @@ VlCoroutine Vsa_tb___024unit__03a__03asa_directed_seq::__VnoInFunc_run(Vsa_tb__S
     unnamedblk2_2__DOT__r = 7U;
     a[7U] = 0xffU;
     unnamedblk2_2__DOT__r = 8U;
-    VL_WRITEF("[SEQ] Sending all-max activation\n");
     co_await this->__VnoInFunc_send_activation(vlSymsp, a);
 }

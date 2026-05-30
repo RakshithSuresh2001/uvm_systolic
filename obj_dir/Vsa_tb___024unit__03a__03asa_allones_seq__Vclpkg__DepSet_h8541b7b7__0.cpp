@@ -113,7 +113,6 @@ VlCoroutine Vsa_tb___024unit__03a__03asa_allones_seq::__VnoInFunc_run(Vsa_tb__Sy
     unnamedblk2_1__DOT__r = 7U;
     a[7U] = 1U;
     unnamedblk2_1__DOT__r = 8U;
-    VL_WRITEF("[SEQ] act=1 -> exp psum=8 per col\n");
     co_await this->__VnoInFunc_send_activation(vlSymsp, a);
     a[0U] = 2U;
     unnamedblk2_2__DOT__r = 1U;
@@ -131,6 +130,5 @@ VlCoroutine Vsa_tb___024unit__03a__03asa_allones_seq::__VnoInFunc_run(Vsa_tb__Sy
     unnamedblk2_2__DOT__r = 7U;
     a[7U] = 2U;
     unnamedblk2_2__DOT__r = 8U;
-    VL_WRITEF("[SEQ] act=2 -> exp psum=16 per col\n");
     co_await this->__VnoInFunc_send_activation(vlSymsp, a);
 }

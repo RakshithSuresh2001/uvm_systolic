@@ -587,7 +587,7 @@ VlCoroutine Vsa_tb___024unit__03a__03asa_base_seq::__VnoInFunc_load_weights(Vsa_
     VL_NULL_CHECK(txn, "tb/sa_sequences.sv", 28)->__PVT__act_in = 0ULL;
     co_await VL_NULL_CHECK(vlSymsp->TOP____024unit.g_drv_mbx, "tb/sa_sequences.sv", 29)->__VnoInFunc_put(vlSymsp, txn);
     unnamedblk1__DOT__r = 8U;
-    co_await this->__VnoInFunc_send_idle(vlSymsp, 0x14U);
+    co_await this->__VnoInFunc_send_idle(vlSymsp, 0x32U);
 }
 
 VlCoroutine Vsa_tb___024unit__03a__03asa_base_seq::__VnoInFunc_send_activation(Vsa_tb__Syms* __restrict vlSymsp, VlUnpacked<CData/*7:0*/, 8> acts) {
@@ -648,5 +648,5 @@ VlCoroutine Vsa_tb___024unit__03a__03asa_base_seq::__VnoInFunc_send_activation(V
                                 << 0x38U));
     unnamedblk3__DOT__r = 8U;
     co_await VL_NULL_CHECK(vlSymsp->TOP____024unit.g_drv_mbx, "tb/sa_sequences.sv", 39)->__VnoInFunc_put(vlSymsp, txn);
-    co_await this->__VnoInFunc_send_idle(vlSymsp, 0x14U);
+    co_await this->__VnoInFunc_send_idle(vlSymsp, 0x32U);
 }

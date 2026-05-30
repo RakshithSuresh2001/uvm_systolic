@@ -17,7 +17,7 @@ sim: clean
 	./obj_dir/sim_sa +TEST=$(TEST)
 
 lint:
-	verilator --lint-only -sv --timing \
+	verilator --lint-only -sv \
 		$(INC) \
 		$(RTL) $(TB)
 

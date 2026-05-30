@@ -13,9 +13,11 @@
 #include "Vsa_tb___024unit__03a__03asa_directed_seq__Vclpkg.h"
 #include "Vsa_tb___024unit__03a__03asa_allones_seq__Vclpkg.h"
 #include "Vsa_tb___024unit__03a__03asa_random_seq__Vclpkg.h"
+#include "Vsa_tb___024unit__03a__03asa_corner_seq__Vclpkg.h"
 #include "Vsa_tb_std__03a__03asemaphore__Vclpkg.h"
 #include "Vsa_tb_std__03a__03aprocess__Vclpkg.h"
 #include "Vsa_tb_std__03a__03amailbox__Tz1__Vclpkg.h"
+#include "Vsa_tb_std__03a__03amailbox__Tz2__Vclpkg.h"
 
 // FUNCTIONS
 Vsa_tb__Syms::~Vsa_tb__Syms()
@@ -30,6 +32,7 @@ Vsa_tb__Syms::Vsa_tb__Syms(VerilatedContext* contextp, const char* namep, Vsa_tb
     , TOP{this, namep}
     , TOP____024unit__03a__03asa_allones_seq__Vclpkg{this, Verilated::catName(namep, "$unit::sa_allones_seq__Vclpkg")}
     , TOP____024unit__03a__03asa_base_seq__Vclpkg{this, Verilated::catName(namep, "$unit::sa_base_seq__Vclpkg")}
+    , TOP____024unit__03a__03asa_corner_seq__Vclpkg{this, Verilated::catName(namep, "$unit::sa_corner_seq__Vclpkg")}
     , TOP____024unit__03a__03asa_coverage__Vclpkg{this, Verilated::catName(namep, "$unit::sa_coverage__Vclpkg")}
     , TOP____024unit__03a__03asa_directed_seq__Vclpkg{this, Verilated::catName(namep, "$unit::sa_directed_seq__Vclpkg")}
     , TOP____024unit__03a__03asa_random_seq__Vclpkg{this, Verilated::catName(namep, "$unit::sa_random_seq__Vclpkg")}
@@ -38,6 +41,7 @@ Vsa_tb__Syms::Vsa_tb__Syms(VerilatedContext* contextp, const char* namep, Vsa_tb
     , TOP____024unit{this, Verilated::catName(namep, "$unit")}
     , TOP__std{this, Verilated::catName(namep, "std")}
     , TOP__std__03a__03amailbox__Tz1__Vclpkg{this, Verilated::catName(namep, "std::mailbox__Tz1__Vclpkg")}
+    , TOP__std__03a__03amailbox__Tz2__Vclpkg{this, Verilated::catName(namep, "std::mailbox__Tz2__Vclpkg")}
     , TOP__std__03a__03aprocess__Vclpkg{this, Verilated::catName(namep, "std::process__Vclpkg")}
     , TOP__std__03a__03asemaphore__Vclpkg{this, Verilated::catName(namep, "std::semaphore__Vclpkg")}
 {
@@ -47,6 +51,7 @@ Vsa_tb__Syms::Vsa_tb__Syms(VerilatedContext* contextp, const char* namep, Vsa_tb
     // Setup each module's pointers to their submodules
     TOP.__024unit__03a__03asa_allones_seq__Vclpkg = &TOP____024unit__03a__03asa_allones_seq__Vclpkg;
     TOP.__024unit__03a__03asa_base_seq__Vclpkg = &TOP____024unit__03a__03asa_base_seq__Vclpkg;
+    TOP.__024unit__03a__03asa_corner_seq__Vclpkg = &TOP____024unit__03a__03asa_corner_seq__Vclpkg;
     TOP.__024unit__03a__03asa_coverage__Vclpkg = &TOP____024unit__03a__03asa_coverage__Vclpkg;
     TOP.__024unit__03a__03asa_directed_seq__Vclpkg = &TOP____024unit__03a__03asa_directed_seq__Vclpkg;
     TOP.__024unit__03a__03asa_random_seq__Vclpkg = &TOP____024unit__03a__03asa_random_seq__Vclpkg;
@@ -55,12 +60,14 @@ Vsa_tb__Syms::Vsa_tb__Syms(VerilatedContext* contextp, const char* namep, Vsa_tb
     TOP.__PVT____024unit = &TOP____024unit;
     TOP.__PVT__std = &TOP__std;
     TOP.std__03a__03amailbox__Tz1__Vclpkg = &TOP__std__03a__03amailbox__Tz1__Vclpkg;
+    TOP.std__03a__03amailbox__Tz2__Vclpkg = &TOP__std__03a__03amailbox__Tz2__Vclpkg;
     TOP.std__03a__03aprocess__Vclpkg = &TOP__std__03a__03aprocess__Vclpkg;
     TOP.std__03a__03asemaphore__Vclpkg = &TOP__std__03a__03asemaphore__Vclpkg;
     // Setup each module's pointer back to symbol table (for public functions)
     TOP.__Vconfigure(true);
     TOP____024unit__03a__03asa_allones_seq__Vclpkg.__Vconfigure(true);
     TOP____024unit__03a__03asa_base_seq__Vclpkg.__Vconfigure(true);
+    TOP____024unit__03a__03asa_corner_seq__Vclpkg.__Vconfigure(true);
     TOP____024unit__03a__03asa_coverage__Vclpkg.__Vconfigure(true);
     TOP____024unit__03a__03asa_directed_seq__Vclpkg.__Vconfigure(true);
     TOP____024unit__03a__03asa_random_seq__Vclpkg.__Vconfigure(true);
@@ -69,6 +76,7 @@ Vsa_tb__Syms::Vsa_tb__Syms(VerilatedContext* contextp, const char* namep, Vsa_tb
     TOP____024unit.__Vconfigure(true);
     TOP__std.__Vconfigure(true);
     TOP__std__03a__03amailbox__Tz1__Vclpkg.__Vconfigure(true);
+    TOP__std__03a__03amailbox__Tz2__Vclpkg.__Vconfigure(true);
     TOP__std__03a__03aprocess__Vclpkg.__Vconfigure(true);
     TOP__std__03a__03asemaphore__Vclpkg.__Vconfigure(true);
     // Setup scopes

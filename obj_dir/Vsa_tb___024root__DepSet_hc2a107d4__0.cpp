@@ -20,37 +20,33 @@ VL_INLINE_OPT VlCoroutine Vsa_tb___024root___eval_initial__TOP__Vtiming__0____Vf
                                                        nullptr, 
                                                        "@(posedge sa_tb.clk)", 
                                                        "tb/sa_tb.sv", 
-                                                       35);
+                                                       45);
     while ((1U & (~ (IData)(vlSelf->sa_tb__DOT__rst_n)))) {
         co_await vlSelf->__VtrigSched_h759c8f0b__0.trigger(1U, 
                                                            nullptr, 
                                                            "@([changed] sa_tb.rst_n)", 
                                                            "tb/sa_tb.sv", 
-                                                           36);
+                                                           46);
     }
     co_await vlSelf->__VtrigSched_h31f193c6__0.trigger(0U, 
                                                        nullptr, 
                                                        "@(posedge sa_tb.clk)", 
                                                        "tb/sa_tb.sv", 
-                                                       37);
+                                                       47);
     while (1U) {
-        co_await VL_NULL_CHECK(vlSymsp->TOP____024unit.g_drv_mbx, "tb/sa_tb.sv", 39)->__VnoInFunc_get(vlSymsp, vlSelf->sa_tb__DOT__driver_run__Vstatic__txn);
+        co_await VL_NULL_CHECK(vlSymsp->TOP____024unit.g_drv_mbx, "tb/sa_tb.sv", 49)->__VnoInFunc_get(vlSymsp, vlSelf->sa_tb__DOT__driver_run__Vstatic__txn);
         co_await vlSelf->__VtrigSched_h31f193c6__0.trigger(0U, 
                                                            nullptr, 
                                                            "@(posedge sa_tb.clk)", 
                                                            "tb/sa_tb.sv", 
-                                                           40);
-        co_await vlSelf->__VdlySched.delay(0x7d0ULL, 
-                                           nullptr, 
-                                           "tb/sa_tb.sv", 
-                                           40);
-        vlSelf->sa_tb__DOT__weight_load = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 41)
+                                                           50);
+        vlSelf->sa_tb__DOT__weight_load = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 51)
             ->__PVT__weight_load;
-        vlSelf->sa_tb__DOT__weight_row = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 42)
+        vlSelf->sa_tb__DOT__weight_row = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 52)
             ->__PVT__weight_row;
-        vlSelf->sa_tb__DOT__weight_data = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 43)
+        vlSelf->sa_tb__DOT__weight_data = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 53)
             ->__PVT__weight_data;
-        vlSelf->sa_tb__DOT__act_in = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 44)
+        vlSelf->sa_tb__DOT__act_in = VL_NULL_CHECK(vlSelf->sa_tb__DOT__driver_run__Vstatic__txn, "tb/sa_tb.sv", 54)
             ->__PVT__act_in;
     }
 }

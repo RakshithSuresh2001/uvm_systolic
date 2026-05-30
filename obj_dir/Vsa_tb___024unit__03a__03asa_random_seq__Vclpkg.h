@@ -8,7 +8,6 @@
 #include "verilated.h"
 #include "verilated_timing.h"
 class Vsa_tb___024unit__03a__03asa_base_seq;
-class Vsa_tb___024unit__03a__03asa_transaction;
 
 
 class Vsa_tb__Syms;

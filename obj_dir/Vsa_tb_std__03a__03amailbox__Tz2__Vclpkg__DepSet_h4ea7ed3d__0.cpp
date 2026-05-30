@@ -1,0 +1,114 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Design implementation internals
+// See Vsa_tb.h for the primary calling header
+
+#include "Vsa_tb__pch.h"
+#include "Vsa_tb__Syms.h"
+#include "Vsa_tb_std__03a__03amailbox__Tz2__Vclpkg.h"
+
+Vsa_tb_std__03a__03amailbox__Tz2::Vsa_tb_std__03a__03amailbox__Tz2(Vsa_tb__Syms* __restrict vlSymsp, IData/*31:0*/ bound) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz2::new\n"); );
+    // Init
+    _ctor_var_reset(vlSymsp);
+    // Body
+    this->__PVT__m_bound = bound;
+}
+
+VlCoroutine Vsa_tb_std__03a__03amailbox__Tz2::__VnoInFunc_put(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> message) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz2::__VnoInFunc_put\n"); );
+    // Init
+    VL_KEEP_THIS;
+    // Body
+    if ((0U != this->__PVT__m_bound)) {
+        if (VL_GTES_III(32, this->__PVT__m_queue.size(), this->__PVT__m_bound)) {
+            CData/*0:0*/ __VdynTrigger_hebf9009d__0;
+            __VdynTrigger_hebf9009d__0 = 0;
+            __VdynTrigger_hebf9009d__0 = 0U;
+            CData/*0:0*/ __Vtrigcurrexpr_hd9f6f057__0;
+            __Vtrigcurrexpr_hd9f6f057__0 = 0;
+            while ((1U & (~ (IData)(__VdynTrigger_hebf9009d__0)))) {
+                co_await vlSymsp->TOP.__VdynSched.evaluation(
+                                                             nullptr, 
+                                                             "@([true] (std::mailbox__Tz2.m_queue.size() < std::mailbox__Tz2.m_bound))", 
+                                                             "/usr/share/verilator/include/verilated_std.sv", 
+                                                             44);
+                __Vtrigcurrexpr_hd9f6f057__0 = VL_LTS_III(32, this->__PVT__m_queue.size(), this->__PVT__m_bound);
+                __VdynTrigger_hebf9009d__0 = __Vtrigcurrexpr_hd9f6f057__0;
+                vlSymsp->TOP.__VdynSched.anyTriggered(__VdynTrigger_hebf9009d__0);
+            }
+            co_await vlSymsp->TOP.__VdynSched.resumption(
+                                                         nullptr, 
+                                                         "@([true] (std::mailbox__Tz2.m_queue.size() < std::mailbox__Tz2.m_bound))", 
+                                                         "/usr/share/verilator/include/verilated_std.sv", 
+                                                         44);
+        }
+    }
+    this->__PVT__m_queue.push_back(message);
+}
+
+VlCoroutine Vsa_tb_std__03a__03amailbox__Tz2::__VnoInFunc_get(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> &message) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz2::__VnoInFunc_get\n"); );
+    // Init
+    VL_KEEP_THIS;
+    // Body
+    if (VL_GTES_III(32, 0U, this->__PVT__m_queue.size())) {
+        CData/*0:0*/ __VdynTrigger_h825ee2c6__0;
+        __VdynTrigger_h825ee2c6__0 = 0;
+        __VdynTrigger_h825ee2c6__0 = 0U;
+        CData/*0:0*/ __Vtrigcurrexpr_h8420d742__0;
+        __Vtrigcurrexpr_h8420d742__0 = 0;
+        while ((1U & (~ (IData)(__VdynTrigger_h825ee2c6__0)))) {
+            co_await vlSymsp->TOP.__VdynSched.evaluation(
+                                                         nullptr, 
+                                                         "@([true] (32'sh0 < std::mailbox__Tz2.m_queue.size()))", 
+                                                         "/usr/share/verilator/include/verilated_std.sv", 
+                                                         59);
+            __Vtrigcurrexpr_h8420d742__0 = VL_LTS_III(32, 0U, this->__PVT__m_queue.size());
+            __VdynTrigger_h825ee2c6__0 = __Vtrigcurrexpr_h8420d742__0;
+            vlSymsp->TOP.__VdynSched.anyTriggered(__VdynTrigger_h825ee2c6__0);
+        }
+        co_await vlSymsp->TOP.__VdynSched.resumption(
+                                                     nullptr, 
+                                                     "@([true] (32'sh0 < std::mailbox__Tz2.m_queue.size()))", 
+                                                     "/usr/share/verilator/include/verilated_std.sv", 
+                                                     59);
+    }
+    message = this->__PVT__m_queue.pop_front();
+}
+
+VlCoroutine Vsa_tb_std__03a__03amailbox__Tz2::__VnoInFunc_peek(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> &message) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz2::__VnoInFunc_peek\n"); );
+    // Init
+    VL_KEEP_THIS;
+    // Body
+    if (VL_GTES_III(32, 0U, this->__PVT__m_queue.size())) {
+        CData/*0:0*/ __VdynTrigger_h825ee2c6__1;
+        __VdynTrigger_h825ee2c6__1 = 0;
+        __VdynTrigger_h825ee2c6__1 = 0U;
+        CData/*0:0*/ __Vtrigcurrexpr_h8420d742__1;
+        __Vtrigcurrexpr_h8420d742__1 = 0;
+        while ((1U & (~ (IData)(__VdynTrigger_h825ee2c6__1)))) {
+            co_await vlSymsp->TOP.__VdynSched.evaluation(
+                                                         nullptr, 
+                                                         "@([true] (32'sh0 < std::mailbox__Tz2.m_queue.size()))", 
+                                                         "/usr/share/verilator/include/verilated_std.sv", 
+                                                         74);
+            __Vtrigcurrexpr_h8420d742__1 = VL_LTS_III(32, 0U, this->__PVT__m_queue.size());
+            __VdynTrigger_h825ee2c6__1 = __Vtrigcurrexpr_h8420d742__1;
+            vlSymsp->TOP.__VdynSched.anyTriggered(__VdynTrigger_h825ee2c6__1);
+        }
+        co_await vlSymsp->TOP.__VdynSched.resumption(
+                                                     nullptr, 
+                                                     "@([true] (32'sh0 < std::mailbox__Tz2.m_queue.size()))", 
+                                                     "/usr/share/verilator/include/verilated_std.sv", 
+                                                     74);
+    }
+    message = this->__PVT__m_queue.at(0U);
+}
+
+void Vsa_tb_std__03a__03amailbox__Tz2::_ctor_var_reset(Vsa_tb__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz2::_ctor_var_reset\n"); );
+    // Body
+    if (false && vlSymsp) {}  // Prevent unused
+    __PVT__m_bound = 0;
+    }

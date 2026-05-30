@@ -50,7 +50,7 @@ VL_ATTR_COLD void Vsa_tb___024root___eval_settle(Vsa_tb___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vsa_tb___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("tb/sa_tb.sv", 10, "", "Settle region did not converge.");
+            VL_FATAL_MT("tb/sa_tb.sv", 12, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -266,6 +266,9 @@ VL_ATTR_COLD void Vsa_tb___024root___ctor_var_reset(Vsa_tb___024root* vlSelf) {
     vlSelf->sa_tb__DOT__weight_data = VL_RAND_RESET_Q(64);
     vlSelf->sa_tb__DOT__act_in = VL_RAND_RESET_Q(64);
     VL_RAND_RESET_W(256, vlSelf->sa_tb__DOT__psum_out);
+    vlSelf->sa_tb__DOT___cyc = 0;
+    VL_ZERO_RESET_W(256, vlSelf->sa_tb__DOT__unnamedblk1__DOT__pv);
+    vlSelf->sa_tb__DOT__unnamedblk10__DOT___i = 0;
     vlSelf->sa_tb__DOT__dut__DOT__act_s1 = VL_RAND_RESET_Q(64);
     vlSelf->sa_tb__DOT__dut__DOT__act_s2 = VL_RAND_RESET_Q(64);
     VL_RAND_RESET_W(2304, vlSelf->sa_tb__DOT__dut__DOT__psum_v);

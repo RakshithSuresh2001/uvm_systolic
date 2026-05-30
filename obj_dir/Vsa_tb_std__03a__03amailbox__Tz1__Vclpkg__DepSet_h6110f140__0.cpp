@@ -11,7 +11,7 @@ void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_num(Vsa_tb__Syms* __restrict 
     num__Vfuncrtn = this->__PVT__m_queue.size();
 }
 
-void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_put(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> message, IData/*31:0*/ &try_put__Vfuncrtn) {
+void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_put(Vsa_tb__Syms* __restrict vlSymsp, VlWide<8>/*255:0*/ message, IData/*31:0*/ &try_put__Vfuncrtn) {
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_put\n"); );
     // Init
     IData/*31:0*/ __Vfunc_num__0__Vfuncout;
@@ -22,7 +22,8 @@ void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_put(Vsa_tb__Syms* __restr
                                                        ([&]() {
                             this->__VnoInFunc_num(vlSymsp, __Vfunc_num__0__Vfuncout);
                         }(), __Vfunc_num__0__Vfuncout), this->__PVT__m_bound))) {
-            this->__PVT__m_queue.push_back(message);
+            this->__PVT__m_queue.push_back(VL_CVT_W_A(message, this->__PVT__m_queue
+                                                      .atDefault()));
             try_put__Vfuncrtn = 1U;
             goto __Vlabel1;
         }
@@ -31,7 +32,7 @@ void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_put(Vsa_tb__Syms* __restr
     }
 }
 
-void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_get(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> &message, IData/*31:0*/ &try_get__Vfuncrtn) {
+void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_get(Vsa_tb__Syms* __restrict vlSymsp, VlWide<8>/*255:0*/ &message, IData/*31:0*/ &try_get__Vfuncrtn) {
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_get\n"); );
     // Init
     IData/*31:0*/ __Vfunc_num__1__Vfuncout;
@@ -41,7 +42,7 @@ void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_get(Vsa_tb__Syms* __restr
         if (VL_LTS_III(32, 0U, ([&]() {
                         this->__VnoInFunc_num(vlSymsp, __Vfunc_num__1__Vfuncout);
                     }(), __Vfunc_num__1__Vfuncout))) {
-            message = this->__PVT__m_queue.pop_front();
+            VL_ASSIGN_W(256,message, this->__PVT__m_queue.pop_front());
             try_get__Vfuncrtn = 1U;
             goto __Vlabel2;
         }
@@ -50,7 +51,7 @@ void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_get(Vsa_tb__Syms* __restr
     }
 }
 
-void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_peek(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> &message, IData/*31:0*/ &try_peek__Vfuncrtn) {
+void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_peek(Vsa_tb__Syms* __restrict vlSymsp, VlWide<8>/*255:0*/ &message, IData/*31:0*/ &try_peek__Vfuncrtn) {
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_peek\n"); );
     // Init
     IData/*31:0*/ __Vfunc_num__2__Vfuncout;
@@ -60,7 +61,7 @@ void Vsa_tb_std__03a__03amailbox__Tz1::__VnoInFunc_try_peek(Vsa_tb__Syms* __rest
         if (VL_LTS_III(32, 0U, ([&]() {
                         this->__VnoInFunc_num(vlSymsp, __Vfunc_num__2__Vfuncout);
                     }(), __Vfunc_num__2__Vfuncout))) {
-            message = this->__PVT__m_queue.at(0U);
+            VL_ASSIGN_W(256,message, this->__PVT__m_queue.at(0U));
             try_peek__Vfuncrtn = 1U;
             goto __Vlabel3;
         }

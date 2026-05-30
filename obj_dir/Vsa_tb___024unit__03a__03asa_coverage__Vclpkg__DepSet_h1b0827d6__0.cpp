@@ -25,8 +25,23 @@ Vsa_tb___024unit__03a__03asa_coverage::Vsa_tb___024unit__03a__03asa_coverage(Vsa
     this->__PVT__act_zero_count = 0U;
     this->__PVT__act_max_count = 0U;
     this->__PVT__act_mixed_count = 0U;
+    this->__PVT__act_bb_count = 0U;
+    this->__PVT__wbin_zero = 0U;
+    this->__PVT__wbin_low = 0U;
+    this->__PVT__wbin_mid = 0U;
+    this->__PVT__wbin_high = 0U;
+    this->__PVT__wbin_max = 0U;
+    this->__PVT__abin_zero = 0U;
+    this->__PVT__abin_low = 0U;
+    this->__PVT__abin_mid = 0U;
+    this->__PVT__abin_high = 0U;
+    this->__PVT__abin_max = 0U;
+    this->__PVT__overflow_prone_count = 0U;
+    this->__PVT__zero_weight_row_count = 0U;
     this->__PVT__weight_load_count = 0U;
     this->__PVT__total_cycles = 0U;
+    this->__PVT__prev_act_nonzero = 0U;
+    this->__PVT__any_max_weight_loaded = 0U;
 }
 
 void Vsa_tb___024unit__03a__03asa_coverage::_ctor_var_reset(Vsa_tb__Syms* __restrict vlSymsp) {
@@ -39,6 +54,21 @@ void Vsa_tb___024unit__03a__03asa_coverage::_ctor_var_reset(Vsa_tb__Syms* __rest
     __PVT__act_zero_count = 0;
     __PVT__act_max_count = 0;
     __PVT__act_mixed_count = 0;
+    __PVT__act_bb_count = 0;
+    __PVT__wbin_zero = 0;
+    __PVT__wbin_low = 0;
+    __PVT__wbin_mid = 0;
+    __PVT__wbin_high = 0;
+    __PVT__wbin_max = 0;
+    __PVT__abin_zero = 0;
+    __PVT__abin_low = 0;
+    __PVT__abin_mid = 0;
+    __PVT__abin_high = 0;
+    __PVT__abin_max = 0;
+    __PVT__overflow_prone_count = 0;
+    __PVT__zero_weight_row_count = 0;
     __PVT__weight_load_count = 0;
     __PVT__total_cycles = 0;
+    __PVT__prev_act_nonzero = 0;
+    __PVT__any_max_weight_loaded = 0;
 }

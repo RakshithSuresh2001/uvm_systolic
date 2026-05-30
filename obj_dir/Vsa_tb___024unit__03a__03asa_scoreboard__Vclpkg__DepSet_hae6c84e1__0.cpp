@@ -20,7 +20,8 @@ Vsa_tb___024unit__03a__03asa_scoreboard::Vsa_tb___024unit__03a__03asa_scoreboard
     this->__PVT__fail_count = 0U;
     this->__PVT__cycle_count = 0U;
     this->__PVT__checks_done = 0U;
-    this->__PVT__last_wload_cycle = 0xffffffecU;
+    this->__PVT__last_wload_cycle = 0xffffffceU;
+    this->__PVT__last_act_cycle = 0xffffffceU;
     this->__PVT__ref_weights[7U][7U] = 0U;
     this->__PVT__ref_weights[7U][6U] = 0U;
     this->__PVT__ref_weights[7U][5U] = 0U;
@@ -100,8 +101,10 @@ void Vsa_tb___024unit__03a__03asa_scoreboard::_ctor_var_reset(Vsa_tb__Syms* __re
     }
     __PVT__cq.atDefault().__PVT__arrival = 0;
     __PVT__cq.atDefault().__PVT__col = 0;
+    __PVT__cq.atDefault().__PVT__row = 0;
     __PVT__cq.atDefault().__PVT__exp = 0;
     __PVT__last_wload_cycle = 0;
+    __PVT__last_act_cycle = 0;
     __PVT__pass_count = 0;
     __PVT__fail_count = 0;
     __PVT__cycle_count = 0;

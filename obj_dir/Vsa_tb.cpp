@@ -18,9 +18,11 @@ Vsa_tb::Vsa_tb(VerilatedContext* _vcontextp__, const char* _vcname__)
     , __024unit__03a__03asa_directed_seq__Vclpkg{vlSymsp->TOP.__024unit__03a__03asa_directed_seq__Vclpkg}
     , __024unit__03a__03asa_allones_seq__Vclpkg{vlSymsp->TOP.__024unit__03a__03asa_allones_seq__Vclpkg}
     , __024unit__03a__03asa_random_seq__Vclpkg{vlSymsp->TOP.__024unit__03a__03asa_random_seq__Vclpkg}
+    , __024unit__03a__03asa_corner_seq__Vclpkg{vlSymsp->TOP.__024unit__03a__03asa_corner_seq__Vclpkg}
     , std__03a__03asemaphore__Vclpkg{vlSymsp->TOP.std__03a__03asemaphore__Vclpkg}
     , std__03a__03aprocess__Vclpkg{vlSymsp->TOP.std__03a__03aprocess__Vclpkg}
     , std__03a__03amailbox__Tz1__Vclpkg{vlSymsp->TOP.std__03a__03amailbox__Tz1__Vclpkg}
+    , std__03a__03amailbox__Tz2__Vclpkg{vlSymsp->TOP.std__03a__03amailbox__Tz2__Vclpkg}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

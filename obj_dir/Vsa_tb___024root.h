@@ -7,10 +7,14 @@
 
 #include "verilated.h"
 #include "verilated_timing.h"
+#include "Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg.h"
 class Vsa_tb___024unit;
 class Vsa_tb___024unit__03a__03asa_allones_seq;
 class Vsa_tb___024unit__03a__03asa_allones_seq__Vclpkg;
+class Vsa_tb___024unit__03a__03asa_base_seq;
 class Vsa_tb___024unit__03a__03asa_base_seq__Vclpkg;
+class Vsa_tb___024unit__03a__03asa_corner_seq;
+class Vsa_tb___024unit__03a__03asa_corner_seq__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_coverage;
 class Vsa_tb___024unit__03a__03asa_coverage__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_directed_seq;
@@ -18,12 +22,13 @@ class Vsa_tb___024unit__03a__03asa_directed_seq__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_random_seq;
 class Vsa_tb___024unit__03a__03asa_random_seq__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_scoreboard;
-class Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg;
 class Vsa_tb___024unit__03a__03asa_transaction;
 class Vsa_tb___024unit__03a__03asa_transaction__Vclpkg;
 class Vsa_tb_std;
 class Vsa_tb_std__03a__03amailbox__Tz1;
 class Vsa_tb_std__03a__03amailbox__Tz1__Vclpkg;
+class Vsa_tb_std__03a__03amailbox__Tz2;
+class Vsa_tb_std__03a__03amailbox__Tz2__Vclpkg;
 class Vsa_tb_std__03a__03aprocess__Vclpkg;
 class Vsa_tb_std__03a__03asemaphore__Vclpkg;
 
@@ -42,9 +47,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
     Vsa_tb___024unit__03a__03asa_directed_seq__Vclpkg* __024unit__03a__03asa_directed_seq__Vclpkg;
     Vsa_tb___024unit__03a__03asa_allones_seq__Vclpkg* __024unit__03a__03asa_allones_seq__Vclpkg;
     Vsa_tb___024unit__03a__03asa_random_seq__Vclpkg* __024unit__03a__03asa_random_seq__Vclpkg;
+    Vsa_tb___024unit__03a__03asa_corner_seq__Vclpkg* __024unit__03a__03asa_corner_seq__Vclpkg;
     Vsa_tb_std__03a__03asemaphore__Vclpkg* std__03a__03asemaphore__Vclpkg;
     Vsa_tb_std__03a__03aprocess__Vclpkg* std__03a__03aprocess__Vclpkg;
     Vsa_tb_std__03a__03amailbox__Tz1__Vclpkg* std__03a__03amailbox__Tz1__Vclpkg;
+    Vsa_tb_std__03a__03amailbox__Tz2__Vclpkg* std__03a__03amailbox__Tz2__Vclpkg;
 
     // DESIGN SPECIFIC STATE
     // Anonymous structures to workaround compiler member-count bugs
@@ -195,6 +202,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         CData/*0:0*/ __VactDidInit;
         CData/*0:0*/ __VactContinue;
         VlWide<8>/*255:0*/ sa_tb__DOT__psum_out;
+        IData/*31:0*/ sa_tb__DOT___cyc;
+        VlWide<8>/*255:0*/ sa_tb__DOT__unnamedblk1__DOT__pv;
+        IData/*31:0*/ sa_tb__DOT__unnamedblk10__DOT___i;
         VlWide<72>/*2303:0*/ sa_tb__DOT__dut__DOT__psum_v;
         VlWide<8>/*255:0*/ sa_tb__DOT__dut__DOT__psum_s11;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__0__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__psum_out;
@@ -242,11 +252,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__2__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__3__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__4__KET____DOT__u_pe__psum_out;
+    };
+    struct {
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__5__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__6__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__7__KET____DOT__u_pe__psum_out;
-    };
-    struct {
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__1__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__2__KET____DOT__u_pe__psum_out;
@@ -277,14 +287,17 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
     VlClassRef<Vsa_tb___024unit__03a__03asa_coverage> sa_tb__DOT__cov;
     VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> sa_tb__DOT__driver_run__Vstatic__txn;
     VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> sa_tb__DOT__monitor_run__Vstatic__txn;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_directed_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk1__DOT__s;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_allones_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk2__DOT__s;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_random_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk3__DOT__s;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_directed_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk4__DOT__ds;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_allones_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk4__DOT__as;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_random_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk4__DOT__rs;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_directed_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__s;
-    VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> sa_tb__DOT__unnamedblk6__DOT__t;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_directed_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk2__DOT__s;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_allones_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk3__DOT__s;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_random_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk4__DOT__s;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_directed_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__ds;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_allones_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__as;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_random_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__rs;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_corner_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__cs;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_base_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__unnamedblk6__DOT__idle;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_base_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__unnamedblk7__DOT__idle;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_base_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk5__DOT__unnamedblk8__DOT__idle;
+    VlClassRef<Vsa_tb___024unit__03a__03asa_directed_seq> sa_tb__DOT__run_test__Vstatic__unnamedblk9__DOT__s;
 
     // INTERNAL VARIABLES
     Vsa_tb__Syms* const vlSymsp;
