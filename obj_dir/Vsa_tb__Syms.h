@@ -56,6 +56,10 @@ class alignas(VL_CACHE_LINE_BYTES)Vsa_tb__Syms final : public VerilatedSyms {
     Vsa_tb_std__03a__03asemaphore__Vclpkg TOP__std__03a__03asemaphore__Vclpkg;
 
     // SCOPE NAMES
+    VerilatedScope __Vscope_sa_tb;
+    VerilatedScope __Vscope_sa_tb__a_act_zero_during_wload;
+    VerilatedScope __Vscope_sa_tb__a_psum_stable_after_reset;
+    VerilatedScope __Vscope_sa_tb__a_wrow_increments;
     VerilatedScope __Vscope_std__process;
     VerilatedScope __Vscope_std__process__suspend;
 

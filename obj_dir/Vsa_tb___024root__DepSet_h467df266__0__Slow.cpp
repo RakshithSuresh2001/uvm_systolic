@@ -267,6 +267,12 @@ VL_ATTR_COLD void Vsa_tb___024root___ctor_var_reset(Vsa_tb___024root* vlSelf) {
     vlSelf->sa_tb__DOT__act_in = VL_RAND_RESET_Q(64);
     VL_RAND_RESET_W(256, vlSelf->sa_tb__DOT__psum_out);
     vlSelf->sa_tb__DOT___cyc = 0;
+    vlSelf->sa_tb__DOT__wload_streak = 0;
+    vlSelf->sa_tb__DOT___Vpast_0_0 = VL_RAND_RESET_I(1);
+    vlSelf->sa_tb__DOT___Vpast_1_0 = VL_RAND_RESET_I(3);
+    vlSelf->sa_tb__DOT___Vpast_2_0 = VL_RAND_RESET_I(1);
+    vlSelf->sa_tb__DOT___Vpast_3_0 = VL_RAND_RESET_I(1);
+    VL_RAND_RESET_W(256, vlSelf->sa_tb__DOT___Vpast_4_0);
     VL_ZERO_RESET_W(256, vlSelf->sa_tb__DOT__unnamedblk1__DOT__pv);
     vlSelf->sa_tb__DOT__unnamedblk10__DOT___i = 0;
     vlSelf->sa_tb__DOT__dut__DOT__act_s1 = VL_RAND_RESET_Q(64);

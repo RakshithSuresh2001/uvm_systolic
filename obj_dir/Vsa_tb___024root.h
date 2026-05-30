@@ -62,6 +62,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         CData/*2:0*/ sa_tb__DOT__weight_row;
         QData/*63:0*/ sa_tb__DOT__weight_data;
         QData/*63:0*/ sa_tb__DOT__act_in;
+        CData/*0:0*/ sa_tb__DOT___Vpast_0_0;
+        CData/*2:0*/ sa_tb__DOT___Vpast_1_0;
+        CData/*0:0*/ sa_tb__DOT___Vpast_2_0;
+        CData/*0:0*/ sa_tb__DOT___Vpast_3_0;
         QData/*63:0*/ sa_tb__DOT__dut__DOT__act_s1;
         QData/*63:0*/ sa_tb__DOT__dut__DOT__act_s2;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__0__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__act_out;
@@ -116,12 +120,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         CData/*0:0*/ sa_tb__DOT__dut__DOT____Vcellinp__gen_row__BRA__6__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__weight_load;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__1__KET____DOT__u_pe__act_out;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__2__KET____DOT__u_pe__act_out;
+    };
+    struct {
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__3__KET____DOT__u_pe__act_out;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__4__KET____DOT__u_pe__act_out;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__5__KET____DOT__u_pe__act_out;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__6__KET____DOT__gen_col__BRA__6__KET____DOT__u_pe__act_out;
-    };
-    struct {
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__7__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__act_out;
         CData/*0:0*/ sa_tb__DOT__dut__DOT____Vcellinp__gen_row__BRA__7__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__weight_load;
         CData/*7:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__7__KET____DOT__gen_col__BRA__1__KET____DOT__u_pe__act_out;
@@ -182,12 +186,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__1__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__2__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__3__KET____DOT__u_pe__DOT__weight_reg;
+    };
+    struct {
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__4__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__5__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__6__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__6__KET____DOT__gen_col__BRA__7__KET____DOT__u_pe__DOT__weight_reg;
-    };
-    struct {
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__7__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__7__KET____DOT__gen_col__BRA__1__KET____DOT__u_pe__DOT__weight_reg;
         CData/*7:0*/ sa_tb__DOT__dut__DOT__gen_row__BRA__7__KET____DOT__gen_col__BRA__2__KET____DOT__u_pe__DOT__weight_reg;
@@ -201,8 +205,18 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         CData/*0:0*/ __Vtrigprevexpr___TOP__sa_tb__DOT__rst_n__0;
         CData/*0:0*/ __VactDidInit;
         CData/*0:0*/ __VactContinue;
+        CData/*0:0*/ __Vsampled__TOP__sa_tb__DOT__rst_n;
+        CData/*0:0*/ __Vsampled__TOP__sa_tb__DOT__weight_load;
+        QData/*63:0*/ __Vsampled__TOP__sa_tb__DOT__act_in;
+        CData/*0:0*/ __Vsampled__TOP__sa_tb__DOT___Vpast_0_0;
+        CData/*2:0*/ __Vsampled__TOP__sa_tb__DOT__weight_row;
+        CData/*2:0*/ __Vsampled__TOP__sa_tb__DOT___Vpast_1_0;
+        CData/*0:0*/ __Vsampled__TOP__sa_tb__DOT___Vpast_3_0;
+        CData/*0:0*/ __Vsampled__TOP__sa_tb__DOT___Vpast_2_0;
         VlWide<8>/*255:0*/ sa_tb__DOT__psum_out;
         IData/*31:0*/ sa_tb__DOT___cyc;
+        IData/*31:0*/ sa_tb__DOT__wload_streak;
+        VlWide<8>/*255:0*/ sa_tb__DOT___Vpast_4_0;
         VlWide<8>/*255:0*/ sa_tb__DOT__unnamedblk1__DOT__pv;
         IData/*31:0*/ sa_tb__DOT__unnamedblk10__DOT___i;
         VlWide<72>/*2303:0*/ sa_tb__DOT__dut__DOT__psum_v;
@@ -238,6 +252,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__3__KET____DOT__gen_col__BRA__4__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__3__KET____DOT__gen_col__BRA__5__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__3__KET____DOT__gen_col__BRA__6__KET____DOT__u_pe__psum_out;
+    };
+    struct {
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__3__KET____DOT__gen_col__BRA__7__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__4__KET____DOT__gen_col__BRA__0__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__4__KET____DOT__gen_col__BRA__1__KET____DOT__u_pe__psum_out;
@@ -252,8 +268,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__2__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__3__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__4__KET____DOT__u_pe__psum_out;
-    };
-    struct {
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__5__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__6__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__5__KET____DOT__gen_col__BRA__7__KET____DOT__u_pe__psum_out;
@@ -274,6 +288,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vsa_tb___024root final : public VerilatedModu
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__7__KET____DOT__gen_col__BRA__6__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ sa_tb__DOT__dut__DOT____Vcellout__gen_row__BRA__7__KET____DOT__gen_col__BRA__7__KET____DOT__u_pe__psum_out;
         IData/*31:0*/ __VactIterCount;
+        VlWide<8>/*255:0*/ __Vsampled__TOP__sa_tb__DOT___Vpast_4_0;
+        VlWide<8>/*255:0*/ __Vsampled__TOP__sa_tb__DOT__psum_out;
     };
     std::string sa_tb__DOT__test_name;
     VlDelayScheduler __VdlySched;

@@ -16,14 +16,14 @@ VL_INLINE_OPT VlCoroutine Vsa_tb___024root___eval_initial__TOP__Vtiming__4(Vsa_t
                                                            nullptr, 
                                                            "@(posedge sa_tb.clk)", 
                                                            "tb/sa_tb.sv", 
-                                                           153);
+                                                           152);
         co_await vlSelf->__VdlySched.delay(0x3e8ULL, 
                                            nullptr, 
                                            "tb/sa_tb.sv", 
-                                           154);
+                                           153);
         if (((IData)(vlSelf->sa_tb__DOT__rst_n) & (VlNull{} 
                                                    != vlSelf->sa_tb__DOT__cov))) {
-            VL_NULL_CHECK(vlSelf->sa_tb__DOT__cov, "tb/sa_tb.sv", 156)->__VnoInFunc_sample_scalar(vlSymsp, vlSelf->sa_tb__DOT__weight_load, (IData)(vlSelf->sa_tb__DOT__weight_row), 
+            VL_NULL_CHECK(vlSelf->sa_tb__DOT__cov, "tb/sa_tb.sv", 155)->__VnoInFunc_sample_scalar(vlSymsp, vlSelf->sa_tb__DOT__weight_load, (IData)(vlSelf->sa_tb__DOT__weight_row), 
                                                                                 (0xffU 
                                                                                 & (IData)(vlSelf->sa_tb__DOT__weight_data)), 
                                                                                 (0xffU 

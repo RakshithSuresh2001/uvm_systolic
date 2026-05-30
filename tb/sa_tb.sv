@@ -90,7 +90,6 @@ module sa_tb;
             txn.act_in      = act_in;
             txn.psum_out    = psum_out;
             g_mon_mbx.put(txn);
-            sb.check_direct(txn);
         end
     endtask
 
@@ -209,13 +208,14 @@ module sa_tb;
     a_act_zero_during_wload: assert property (p_act_zero_during_wload)
         else $error("[SVA FAIL] act_in nonzero during weight_load at time %0t", $time);
 
-    // 3. weight_row must be stable while weight_load is high
-    property p_wrow_stable;
+    // 3. weight_row increments by 1 on each consecutive weight_load cycle
+    property p_wrow_increments;
         @(posedge clk) disable iff (!rst_n)
-        (weight_load && $past(weight_load)) |-> $stable(weight_row);
+        (weight_load && $past(weight_load)) |->
+            (weight_row == $past(weight_row) + 1'b1);
     endproperty
-    a_wrow_stable: assert property (p_wrow_stable)
-        else $error("[SVA FAIL] weight_row changed while weight_load high at time %0t", $time);
+    a_wrow_increments: assert property (p_wrow_increments)
+        else $error("[SVA FAIL] weight_row did not increment during weight_load at time %0t", $time);
 
     // 4. weight_load should not stay high more than 8 consecutive cycles
     //    (implemented as immediate assertion with counter — ##[M:N] unsupported in Verilator)

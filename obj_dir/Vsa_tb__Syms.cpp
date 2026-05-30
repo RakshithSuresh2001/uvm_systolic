@@ -80,6 +80,10 @@ Vsa_tb__Syms::Vsa_tb__Syms(VerilatedContext* contextp, const char* namep, Vsa_tb
     TOP__std__03a__03aprocess__Vclpkg.__Vconfigure(true);
     TOP__std__03a__03asemaphore__Vclpkg.__Vconfigure(true);
     // Setup scopes
+    __Vscope_sa_tb.configure(this, name(), "sa_tb", "sa_tb", -9, VerilatedScope::SCOPE_OTHER);
+    __Vscope_sa_tb__a_act_zero_during_wload.configure(this, name(), "sa_tb.a_act_zero_during_wload", "a_act_zero_during_wload", -9, VerilatedScope::SCOPE_OTHER);
+    __Vscope_sa_tb__a_psum_stable_after_reset.configure(this, name(), "sa_tb.a_psum_stable_after_reset", "a_psum_stable_after_reset", -9, VerilatedScope::SCOPE_OTHER);
+    __Vscope_sa_tb__a_wrow_increments.configure(this, name(), "sa_tb.a_wrow_increments", "a_wrow_increments", -9, VerilatedScope::SCOPE_OTHER);
     __Vscope_std__process.configure(this, name(), "std.process", "process", -9, VerilatedScope::SCOPE_OTHER);
     __Vscope_std__process__suspend.configure(this, name(), "std.process.suspend", "suspend", -9, VerilatedScope::SCOPE_OTHER);
 }

@@ -26,7 +26,6 @@ VM_CLASSES_FAST += \
 	Vsa_tb \
 	Vsa_tb___024root__DepSet_h1e59386b__0 \
 	Vsa_tb___024root__DepSet_h04c397ce__0 \
-	Vsa_tb___024root__DepSet_hcd57366c__0 \
 	Vsa_tb___024root__DepSet_hc2a107d4__0 \
 	Vsa_tb___024root__DepSet_he0ac6271__0 \
 	Vsa_tb___024root__DepSet_h467df266__0 \
@@ -36,7 +35,6 @@ VM_CLASSES_FAST += \
 	Vsa_tb___024unit__03a__03asa_transaction__Vclpkg__DepSet_h3f13d6e5__0 \
 	Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg__DepSet_hae6c84e1__0 \
 	Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg__DepSet_h964895f0__0 \
-	Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg__DepSet_h6083ed91__0 \
 	Vsa_tb___024unit__03a__03asa_coverage__Vclpkg__DepSet_h1b0827d6__0 \
 	Vsa_tb___024unit__03a__03asa_coverage__Vclpkg__DepSet_h492cf2f9__0 \
 	Vsa_tb___024unit__03a__03asa_coverage__Vclpkg__DepSet_hd5b7231a__0 \

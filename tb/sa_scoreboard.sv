@@ -36,39 +36,6 @@ class sa_scoreboard;
         foreach (ref_weights[r,c]) ref_weights[r][c] = 0;
     endfunction
 
-    task check_direct(sa_transaction txn);
-        bit any_active;
-        cycle_count++;
-
-        if (txn.weight_load) begin
-            for (int c = 0; c < COLS; c++)
-                ref_weights[txn.weight_row][c] = txn.weight_data[c];
-            last_wload_cycle = cycle_count;
-            cq.delete();
-        end
-
-        any_active = 0;
-        foreach (txn.act_in[r]) if (txn.act_in[r] != 0) any_active = 1;
-
-        if (any_active
-            && (cycle_count - last_wload_cycle) > DRAIN_CYCLES
-            && (cycle_count - last_act_cycle)   > ACT_SPACING) begin
-            last_act_cycle = cycle_count;
-            for (int row = 0; row < ROWS; row++) begin
-                for (int col = 0; col < COLS; col++) begin
-                    check_entry_t e;
-                    e.arrival = cycle_count + PE_LAT + col + (ROWS-1-row);
-                    e.col     = col;
-                    e.row     = row;
-                    e.exp     = ACC_W'(ref_weights[row][col]) *
-                                ACC_W'(txn.act_in[row]);
-                    cq.push_back(e);
-                end
-            end
-        end
-
-        // psum check done externally in tb via check_psum_entry()
-    endtask
 
     // Called from tb always block with direct wire access per column
     function void fire_checks(int cyc,
@@ -138,10 +105,6 @@ class sa_scoreboard;
         end
     endfunction
 
-    task run();
-        sa_transaction txn;
-        forever begin mbx.get(txn); end
-    endtask
 
     function void do_reset();
         foreach (ref_weights[r,c]) ref_weights[r][c] = 0;

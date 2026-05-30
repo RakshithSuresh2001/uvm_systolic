@@ -8,7 +8,6 @@
 #include "verilated.h"
 #include "verilated_timing.h"
 #include "Vsa_tb___024unit__03a__03asa_scoreboard__Vclpkg.h"
-class Vsa_tb___024unit__03a__03asa_transaction;
 class Vsa_tb_std__03a__03amailbox__Tz2;
 
 
@@ -64,11 +63,9 @@ class Vsa_tb___024unit__03a__03asa_scoreboard : public VlClass {
     VlUnpacked<VlUnpacked<CData/*7:0*/, 8>, 8> __PVT__ref_weights;
     VlQueue<Vsa_tb_check_entry_t__struct__0> __PVT__cq;
     VlClassRef<Vsa_tb_std__03a__03amailbox__Tz2> __PVT__mbx;
-    void __VnoInFunc_check_direct(Vsa_tb__Syms* __restrict vlSymsp, VlClassRef<Vsa_tb___024unit__03a__03asa_transaction> txn);
     void __VnoInFunc_do_reset(Vsa_tb__Syms* __restrict vlSymsp);
     void __VnoInFunc_fire_checks(Vsa_tb__Syms* __restrict vlSymsp, IData/*31:0*/ cyc, IData/*31:0*/ p0, IData/*31:0*/ p1, IData/*31:0*/ p2, IData/*31:0*/ p3, IData/*31:0*/ p4, IData/*31:0*/ p5, IData/*31:0*/ p6, IData/*31:0*/ p7);
     void __VnoInFunc_report(Vsa_tb__Syms* __restrict vlSymsp);
-    VlCoroutine __VnoInFunc_run(Vsa_tb__Syms* __restrict vlSymsp);
     void __VnoInFunc_schedule(Vsa_tb__Syms* __restrict vlSymsp, IData/*31:0*/ cyc, CData/*0:0*/ wload, CData/*2:0*/ wrow, QData/*63:0*/ wdata, CData/*7:0*/ a0, CData/*7:0*/ a1, CData/*7:0*/ a2, CData/*7:0*/ a3, CData/*7:0*/ a4, CData/*7:0*/ a5, CData/*7:0*/ a6, CData/*7:0*/ a7);
   private:
     void _ctor_var_reset(Vsa_tb__Syms* __restrict vlSymsp);
