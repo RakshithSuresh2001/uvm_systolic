@@ -189,6 +189,56 @@ module sa_tb;
             while (sb.cq.size() > 0 && sb.cq[0].arrival <= _cyc) sb.cq.delete(0);
         end
     end
+    // =====================================================================
+    // SVA Assertions — structural protocol checks
+    // =====================================================================
+
+    // 1. psum_out never X or Z after reset
+    property p_psum_no_x;
+        @(posedge clk) disable iff (!rst_n)
+        !$isunknown(psum_out);
+    endproperty
+    a_psum_no_x: assert property (p_psum_no_x)
+        else $error("[SVA FAIL] psum_out contains X/Z at time %0t", $time);
+
+    // 2. act_in must be zero during weight_load
+    property p_act_zero_during_wload;
+        @(posedge clk) disable iff (!rst_n)
+        weight_load |-> (act_in == '0);
+    endproperty
+    a_act_zero_during_wload: assert property (p_act_zero_during_wload)
+        else $error("[SVA FAIL] act_in nonzero during weight_load at time %0t", $time);
+
+    // 3. weight_row must be stable while weight_load is high
+    property p_wrow_stable;
+        @(posedge clk) disable iff (!rst_n)
+        (weight_load && $past(weight_load)) |-> $stable(weight_row);
+    endproperty
+    a_wrow_stable: assert property (p_wrow_stable)
+        else $error("[SVA FAIL] weight_row changed while weight_load high at time %0t", $time);
+
+    // 4. weight_load should not stay high more than 8 consecutive cycles
+    //    (implemented as immediate assertion with counter — ##[M:N] unsupported in Verilator)
+    int unsigned wload_streak;
+    always @(posedge clk) begin
+        if (!rst_n) wload_streak <= 0;
+        else if (weight_load) begin
+            wload_streak <= wload_streak + 1;
+            assert (wload_streak < 8)
+                else $error("[SVA FAIL] weight_load high for >8 cycles at time %0t", $time);
+        end else
+            wload_streak <= 0;
+    end
+
+    // 5. psum_out stable for at least 1 cycle after reset deasserts
+    property p_psum_stable_after_reset;
+        @(posedge clk)
+        $rose(rst_n) |=> $stable(psum_out);
+    endproperty
+    a_psum_stable_after_reset: assert property (p_psum_stable_after_reset)
+        else $error("[SVA FAIL] psum_out unstable right after reset at time %0t", $time);
+
+    // =====================================================================
     always @(posedge clk)
         if (rst_n && (|psum_out))
             $display("[PSUM] cycle=%0d p0=%08x p1=%08x p2=%08x p3=%08x p4=%08x p5=%08x p6=%08x p7=%08x",
