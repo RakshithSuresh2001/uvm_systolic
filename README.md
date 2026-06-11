@@ -1,6 +1,6 @@
 # UVM-Style Systolic Array Testbench
 
-A structured SystemVerilog testbench for an 8x8 weight-stationary systolic array, built without a UVM library to run cleanly under Verilator 5.x. The testbench covers directed, all-ones, random, corner-case, and full regression tests with 1337 checks and 5 SVA properties passing across all sequences.
+A structured SystemVerilog testbench for an 8x8 weight-stationary systolic array, built without a UVM library to run cleanly under Verilator 5.020. The testbench covers directed, all-ones, random, corner-case, and full regression tests with 1337 checks and 5 SVA properties passing across all sequences.
 
 ## DUT
 
